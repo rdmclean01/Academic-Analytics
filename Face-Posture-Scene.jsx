@@ -1,3 +1,7 @@
+# This file uses javascript to automate photoshop. 
+# I used this to to create 5000+ visual stimuli for a research project at Brigham Young University. 
+
+
 #target photoshop
 
 
