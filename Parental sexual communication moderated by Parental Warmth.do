@@ -8,7 +8,7 @@ label variable Q_cont_mom "Mom Quality dimension, control subscale"
 label variable Q_open_dad "Dad Quality dimension, openness subscale"
 label variable Q_cont_dad "Dad Quality dimension, control subscale"
 
-
+// Check Reliability
 alpha C_Condom C_Contraception
 alpha zC_Intercourse_1b_TEXT zC_Intercourse_1c_TEXT zC_Oral_1b_TEXT zC_Oral_1c_TEXT zC_Oral_2b_TEXT zC_Oral_2c_TEXT
 
@@ -49,7 +49,8 @@ foreach quality of global mother_q {
 	
 	local dr2_1v2 = `r2_2' - `r2_1'
 	local dr2_2v3 = `r2_3' - `r2_2'
-
+	
+	// Display a table of significant differences
 	display "R2 initial = `r2_1'"
 	display "R2 change level 2 = `dr2_1v2'"
 	display "R2 change level 3 = `dr2_2v3'" 
@@ -58,7 +59,7 @@ foreach quality of global mother_q {
 	lrtest m2 m3
 	
 	
-	// If p-value of the interaction is significant, create graph
+	// If p-value of the interaction is significant, create moderation graph
 	local pval1 = 2 * ttail(e(df_r), abs(_b[inter_F_risk_mom]/_se[inter_F_risk_mom]))
 	local pval2 = 2 * ttail(e(df_r), abs(_b[inter_F_pos_mom]/_se[inter_F_pos_mom]))
 	local pval3 = 2 * ttail(e(df_r), abs(_b[inter_F_phys_mom]/_se[inter_F_phys_mom]))
