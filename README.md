@@ -1,2 +1,1 @@
-# Academic-Analytics
-Here are some of the academic projects and papers I have worked on which highlight my analytical skills
+This repository contains a sample of the work that I did while working as a graduate research assistant. Examples include statistical analyses, machine learning / cluster analyses, and automated processes using python and javascript.
