@@ -120,8 +120,9 @@ def updateWordCount(filename):
 # Then, it will follow through the function calls
 ##############################################################
 if __name__ == '__main__':
-    root = tk.Tk()
+    root = tk.Tk() # Opens dialog boxes to allow user to choose location
     root.withdraw()
+    # Pick the location of the documents with dialog boxes
     fileName_keys = filedialog.askopenfile(title = "Select a csv file containing your keywords",filetypes = ( ("CSV Files", "*.csv"), ("All Files", "*.*")) )
     originDirectory = filedialog.askdirectory(title = "Select the folder with your original files")
     saveDirectory = filedialog.askdirectory(title = " Select the folder where you want to the output file to be")
