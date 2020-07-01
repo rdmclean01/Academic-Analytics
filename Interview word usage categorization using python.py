@@ -56,9 +56,9 @@ currIndex = 'None'
 def updateWordCount(filename):
     global currIndex    # Reference the global current Index
     global currSpeaker  # Reference the global current Speaker
-    global currDoc      # FIXME
+    global currDoc      # Reference the global current Document
     doc = Document(filename) # Open the current document
-    for paragraph in doc.paragraphs:
+    for paragraph in doc.paragraphs: # Word documents are organized by paragraphs and runs
         # print('\t',paragraph.text)
         
         #Update from a speaker change
